@@ -1,0 +1,8 @@
+type Durp {
+    id: ID!
+    test: String!
+}
+
+type Query {
+    listDurps: [Durp]
+}

@@ -1,0 +1,21 @@
+type Wubba {
+  id: ID!
+  email: AWSEmail
+  json: AWSJSON
+  date: AWSDate
+  time: AWSTime
+  datetime: AWSDateTime
+  timestamp: AWSTimestamp
+  url: AWSURL
+  phoneno: AWSPhone
+  ip: AWSIPAddress
+}
+
+type Query {
+    getWubba(id: ID!): Wubba
+    listWubbas: [Wubba]
+}
+
+type Mutation {
+    createWubba(wubba: Wubba!): Wubba
+}

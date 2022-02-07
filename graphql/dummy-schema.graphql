@@ -1,0 +1,25 @@
+type Dummy {
+    id: ID!
+    test: String!
+}
+
+input DummyInput {
+    id: ID!
+    test: String!
+}
+
+input UpdateDummyInput {
+    id: ID!
+    test: String!
+}
+
+type Query {
+    listDummies: [Dummy]
+    getDummyById(id: String!): Dummy
+}
+
+type Mutation {
+    createDummy(dummy: DummyInput!): Dummy
+    deleteDummy(id: String!): String
+    updateDummy(dummy: UpdateDummyInput!): Dummy
+}
